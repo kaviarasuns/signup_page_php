@@ -17,14 +17,6 @@
 </head>
 <body>
     <?php include '../parts/nav.php'; ?>
-    <?php if(isset($_SESSION['image_success'])): ?>
-        <div class="alert alert-success all-msg text-center success-msg">
-            <?php echo $_SESSION['image_success']; ?>
-        </div>
-    <?php endif; ?>
-    <?php unset($_SESSION['image_success']); ?>
-
-
     <div class="container contents">
         <div class="row">
             <div class="col-md-3">
@@ -34,31 +26,25 @@
             </div><!-- col -->
             <div class="col-md-9">
                 <div class="right-area">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure iusto esse incidunt, ipsam cumque ut! Suscipit voluptatum explicabo alias vitae laudantium saepe assumenda, tenetur blanditiis delectus laborum sed officia accusantium.
-                
-                <?php include 'parts/bio.php' ?>
-                <?php include 'parts/twitter.php' ?>
-                <?php include 'parts/linkedin.php' ?>
-                <?php include 'parts/name.php' ?>
-                <?php include 'parts/change_password.php' ?>
-                
+                   <h4>Update Profile Picture</h4><hr>
+                   <div class="form-group">
+                    <?php update_picture(); ?>
+                   </div>
+                   <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" name="file" class="form-control" required="" >
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Update Picture" name="picture" class="btn btn-success">
+                    </div>
+                   </form>
                 </div><!-- right-area -->
             </div><!-- col -->
         </div><!-- row -->
     </div><!-- container -->
 
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-   integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-   crossorigin="anonymous"></script>
+
    <script type="text/javascript" src="../js/jquery.min.js"></script>
    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="js/profile"></script>
-       <script type="text/javascript">
-        $(document).ready(function(){
-            setTimeout(() => {
-                $(".all-msg").fadeOut("slow");
-            }, 1500);
-        })
-    </script> 
 </body>
 </html>

@@ -22,9 +22,9 @@ function links(){
 	}
 
     if(empty($r->address)){
-		$address =  "<a href='address.php'>Add Address <i class='fa fa-plus-circle'></i></a>";
+		$address =  "<a href='#' data-target='#address' data-toggle='modal'>Add Address <i class='fa fa-plus-circle'></i></a>";
 	} else {
-		$address =  "<a href='address.php'>Update Address <i class='fa fa-pencil'></i></a>";
+		$address =  "<a href='#' data-target='#address' data-toggle='modal'>Update Address <i class='fa fa-pencil'></i></a>";
 	}
 
     if(empty($r->twitter)){

@@ -25,6 +25,14 @@
     <?php unset($_SESSION['image_success']); ?>
 
 
+     <?php if(isset($_SESSION['bio_success'])): ?>
+        <div class="alert alert-success all-msg text-center success-msg">
+            <?php echo $_SESSION['bio_success']; ?>
+        </div>
+    <?php endif; ?>
+    <?php unset($_SESSION['bio_success']); ?>
+
+
     <div class="container contents">
         <div class="row">
             <div class="col-md-3">
@@ -37,6 +45,7 @@
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure iusto esse incidunt, ipsam cumque ut! Suscipit voluptatum explicabo alias vitae laudantium saepe assumenda, tenetur blanditiis delectus laborum sed officia accusantium.
                 
                 <?php include 'parts/bio.php' ?>
+                <?php include 'parts/address.php' ?>
                 <?php include 'parts/twitter.php' ?>
                 <?php include 'parts/linkedin.php' ?>
                 <?php include 'parts/name.php' ?>
@@ -52,7 +61,7 @@
    crossorigin="anonymous"></script>
    <script type="text/javascript" src="../js/jquery.min.js"></script>
    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="js/profile"></script>
+   <script type="text/javascript" src="js/profile.js"></script>
        <script type="text/javascript">
         $(document).ready(function(){
             setTimeout(() => {

@@ -10,7 +10,9 @@ function add_bio(bio) {
       dataType: "JSON",
       success: function (feedback) {
         if (feedback["error"] == "success") {
-          location = "index.php";
+          if (feedback["error"] == "success") {
+            location = "profile.php";
+          }
         }
       },
     });

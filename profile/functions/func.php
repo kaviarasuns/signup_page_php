@@ -41,8 +41,7 @@ function links(){
 
     echo "<ul class='list-group'>
 	        $photo
-	    <li class='list-group-item first-li'>$photo_link</li>
-         <li class='list-group-item'>$bio</li>
+         <li class='list-group-item first-li'>$bio</li>
          <li class='list-group-item'>$twitter</li>
          <li class='list-group-item'>$linkedin</li>
          <li class='list-group-item'><a href='#' data-target='#update_password' data-toggle='modal'>Update Password <i class='fa fa-pencil'></i></a></li>

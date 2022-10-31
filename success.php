@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="success-area">
-                    <?php if($isset($_SESSION['user_name'])) : ?>
-                        <?php echo "Hi <strong>". $_SESSION['user_name']. "</strong>Welcom to our website we are glad to see you here;" ?>
-                    <?php endif; ?>
-                    <?php unset($_SESSION['user_name']); ?>
+ 			        <?php if(isset($_SESSION['user_name'])): ?>
+						<?php echo "<i class='fa fa-check-circle'></i> Hi <strong>". $_SESSION['user_name']. "</strong> Welcome to our website we are glad to see you here Now login <a href='index.php'>Login</a>"; ?>
+					<?php endif; ?>
+					<?php unset($_SESSION['user_name']); ?>
                 </div>
             </div>
         </div>

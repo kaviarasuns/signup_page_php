@@ -8,7 +8,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <?php if(!isset($_SESSION['user_id'])): ?>
+                        <?php if(isset($_SESSION['user_id'])): ?>
                         <a href="logout.php" class="nav-link  logout-btn">Logout</a>
                         <?php endif; ?>
                     </li>
